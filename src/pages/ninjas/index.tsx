@@ -1,12 +1,10 @@
-import Footer from "components/Footer";
-import Navbar from "components/Navbar";
+import Layout from "components/Layout";
+import { ReactElement } from "react";
 
-export default function ninjas() {
+export default function ninjas(): ReactElement {
   return (
-    <div>
-      <Navbar />
+    <Layout>
       <h1>ninjas page</h1>
-      <Footer />
-    </div>
+    </Layout>
   );
 }

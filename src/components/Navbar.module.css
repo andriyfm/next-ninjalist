@@ -1,0 +1,15 @@
+.navList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gainsboro;
+  padding: 1rem 0;
+}
+.navItem {
+  display: inline-block;
+  margin-right: 1rem;
+  text-transform: capitalize;
+}
+.navItem:hover {
+  color: orangered;
+}

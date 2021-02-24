@@ -1,18 +1,18 @@
+import navConfig from "configs/navConfig";
 import Link from "next/link";
+import { memo, ReactElement } from "react";
+import styles from "./Navbar.module.css";
 
-export default function Navbar() {
+function Navbar(): ReactElement {
   return (
-    <nav>
-      <img src="" alt="" />
-      <Link href="/">
-        <a>Home</a>
-      </Link>
-      <Link href="/about">
-        <a>about</a>
-      </Link>
-      <Link href="/ninjas">
-        <a>ninjas</a>
-      </Link>
+    <nav className={styles.navList}>
+      {navConfig.map((item) => (
+        <Link key={item.name} href={item.path}>
+          <a className={styles.navItem}>{item.name}</a>
+        </Link>
+      ))}
     </nav>
   );
 }
+
+export default memo(Navbar);

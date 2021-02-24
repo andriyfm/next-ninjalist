@@ -1,6 +1,9 @@
-export default function about() {
+import Layout from "components/Layout";
+import { memo, ReactElement } from "react";
+
+function about(): ReactElement {
   return (
-    <div>
+    <Layout>
       <h1>about page</h1>
       <p>
         Est culpa esse proident consequat aliquip laboris esse ad irure ea. Aute
@@ -21,6 +24,8 @@ export default function about() {
         laborum nulla duis sint anim sit est eu. Anim esse anim veniam nisi
         Lorem pariatur consectetur adipisicing anim aute deserunt id laboris.
       </p>
-    </div>
+    </Layout>
   );
 }
+
+export default memo(about);
